@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <p>Filter:</p>
+  <form>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" value="all" [(ngModel)]="selectedFilterRadioButton" (change)="onSelectedFilterRadioButtonChanged()">All ({{all}})
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"value="true" [(ngModel)]="selectedFilterRadioButton"(change)="onSelectedFilterRadioButtonChanged()">In Stock ({{inStock}})
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"value="false" [(ngModel)]="selectedFilterRadioButton"(change)="onSelectedFilterRadioButtonChanged()">Out of Stock ({{outOfStock}})
+    </label>
+  </form>
+</div>
+
+</body>
+</html>
